@@ -8,7 +8,7 @@ resource "aws_instance" "haggisVM1" {
   ami           = "ami-084a803c29d3d65c4"
   instance_type = "t2.micro"
   key_name      = "aws_id_rsa.pub"
-  security_groups = ["${aws_security_group.allow_ssh.name}","${aws_security_group.allow_https.name}"]
+  security_groups = ["${aws_security_group.allow_ssh.name}","${aws_security_group.allow_https.name}","${aws_security_group.allow_http.name}"]
   tags {
     Name = "haggisVM1"
   }
