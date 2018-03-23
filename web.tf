@@ -1,7 +1,6 @@
 resource "aws_security_group" "allow_https" {
-    name = "allow_all"
+    name = "allow_https"
     description = "Allow inbound HTTPS traffic from my IP"
-    vpc_id = "VPC-ID"
     
     ingress {
         from_port = 443
